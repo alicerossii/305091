@@ -80,11 +80,13 @@ At the end, the dataset is divided into `k` clusters, each represented by its ce
 
 #### **Optimal Cluster Number Determination**  
 
-- We computed both the **Elbow Method** and the **Silhouette Score** to determine the best number of clusters.  
-- After tuning hyperparameters, we found that **3 clusters** was optimal for K-Means, with a silhouette score of **0.56**.  
-
-
-FOTO DEI K MEANS SIA CON SILHOUTTE SCORE, ELBOW METHOD CHE FOTO 3D
+- We computed both the **Elbow Method** and the **Silhouette Score** to determine the best number of clusters.
+- ![silhouette!](images_github/silhouettepng.png 'silhouette')
+![elbow!](images_github/elbow.png 'elbow')
+- After tuning hyperparameters, we found that **3 clusters** was optimal for K-Means, with a silhouette score of **0.56**.
+- 
+![kmeans1!](images_github/kmeans1.png 'kmeans2d')
+![kmeans2!](images_github/kmeans2.png 'kmeans3d')
 
 Overall, the plot demonstrates clear separation between clusters, with minimal overlap. This supports the effectiveness of the K-Means algorithm in identifying distinct groups in the dataset.
 
@@ -122,7 +124,7 @@ Overall, the plot demonstrates clear separation between clusters, with minimal o
   - Silhouette score: **0.54**  
 
 
-*Insert visualizations for Agglomerative Clustering analysis here.*
+![agglomerative3clusters!](images_github/agglomerative.png 'agglomerative')
 
 ---
 
@@ -165,7 +167,7 @@ Despite hyperparameter tuning, we were not satisfied with the results obtained u
    - DBSCAN struggles with smaller datasets where density differences are less pronounced.
   
 
-*Insert  visualizations for DBSCAN analysis here.*
+![DBSCAN!](images_github/dbscan.png 'dbscan')
 
 ---
   
@@ -210,7 +212,7 @@ This balance of simplicity, interpretability, and performance made **K-Means the
 
 ## Analysis of the Clusters of K-Means  
 
-*Insert histograms and visualizations for K-Means analysis here.*
+![analysisclusters!](images_github/statisticsforkmeans.png 'statisticskmeans')
 
 By analyzing each cluster of the K-Means, we identified the factors that attract aliens to each planet:  
 

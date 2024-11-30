@@ -46,7 +46,9 @@ Our first approaches were to substitute the outliers with the mean, but it was u
 
 •	**Correlation matrix**: we firstly plotted the whole correlation matrix, with all the features. This helped us a lot in seeing the ones we could drop, as they were not correlated with anyone. After this passage, we plotted the correlation matrix again but only with the variables we considered useful. 
 
-•	**Feature engineering**: thanks to the correlation matrix and the pairplot of all of our variables, we noticed that we could combine some of them because of how highly correlated they were. After this, we had all of our final features, and we made a pairplot of all of them together. 
+•	**Feature engineering**: thanks to the correlation matrix and the pairplot of all of our variables, we noticed that we could combine some of them because of how highly correlated they were. After this, we had all of our final features, and we made a pairplot of all of them together. We created 2 variables: `Energy_Population_Impact` and `Energy_per_Mission`
+- The first feature we create calculates the impact of energy consumption relative to the alien population by multiplying the two existing features. 
+- The second one calculates the total energy consumption required per exploration mission by still multiplying the two. 
 
 •	_PCA_: This step has been done in the last part of the project; We had to define the PCA to reduce the number of features in a dataset while retaining as much information (variance) as possible. After this, in the last part of the project, we will define it with 2 components for a 2-dimensions figure, and with 3 components for a 3-dimensions figure. We will store the result of the PCA transformation in aliens_pca.
 
@@ -112,7 +114,7 @@ Overall, the plot demonstrates clear separation between clusters, with minimal o
   - **Average linkage**  
   - Silhouette score: ***0.743***  
 
-- To improve visualization without losing too much on the silhouette score, we explored different settings.  
+- To improve visualization without losing too much on the silhouette score, we explored different settings, trying to plot all the different results with number of clusters=3. Even if the best result with 3 clusters would have been with linkage=average because it gives us a silhouette score of 0,563, visually it was not the best option. So we chose the ward linkage even if it has a lower silhouette score.
 
 - Final result:  
   - **3 clusters**  
@@ -217,16 +219,16 @@ By analyzing each cluster of the K-Means, we identified the factors that attract
 - **Cluster 0 (Blue)**:  
   - Generally, Cluster 0 has lower values across most features, even with some negative values.  
   - Represents entities with minimal activity or influence in areas such as:  
-    - **Military Engagements**  
-    - **Energy Population Impact**  
-    - **Terraforming Initiatives**  
+    - **`Military Engagements`**  
+    - **`Energy Population Impact`**  
+    - **`Terraforming Initiatives`**  
   - This cluster corresponds to a group that is resource-limited, less expansive, and has minimal intergalactic presence.  
 
 - **Cluster 1 (Orange)**:  
   - Cluster 1 shows moderate values across the features, maintaining a relatively balanced profile.  
   - Notable peaks in:  
-    - **Interplanetary Communications**  
-    - **Resource Allocation Credits**  
+    - **`Interplanetary Communications`**  
+    - **`Resource Allocation Credits`**  
   - Suggests entities focusing on communication and financial planning.  
   - Represents a middle-ground group with:  
     - Average resource usage and influence.  
@@ -234,16 +236,16 @@ By analyzing each cluster of the K-Means, we identified the factors that attract
 
 - **Cluster 2 (Green)**:  
   - Dominates most variables, with significantly higher values in key features such as:  
-    - **Mineral Extraction Tons**  
-    - **Energy Population Impact**  
-    - **Terraforming Initiatives**  
+    - **`Mineral Extraction Tons`**  
+    - **`Energy Population Impact`**  
+    - **`Terraforming Initiatives`**  
   - These entities appear to be:  
     - Resource-intensive.  
     - Highly active in planetary modification.  
     - Focused on expansion.  
   - High values in:  
-    - **Military Engagements**  
-    - **Species Expansion Response**  
+    - **`Military Engagements`**  
+    - **`Species Expansion Response`**  
     - Indicate a group prioritizing territorial growth and defense.  
 
 ---

@@ -1,9 +1,9 @@
 ### Project AI on Aliens_Galaxy
 
 ## TEAM MEMBERS:
-- Alice Rossi 305091;
-- Tommaso Giannetti   ;
-- Sara Vagheggini  .
+- Alice Rossi 305091
+- Tommaso Giannetti 304551 
+- Sara Vagheggini 302411 
 
 ## 1.	**Introduction**  
 In the future, alien species travel through space and colonize planets all across the galaxy. Each species likes certain types of planets, and their success depends on factors like climate, resources, and how they are socially organized.
@@ -45,6 +45,8 @@ We wanted a clean and comprehensible dataset to have a better insight of the dat
 Our first approaches were to substitute the outliers with the mean, but it was unsuitable as it still distorted the data distribution; and to handle outliers with a logarithmic transformation, which reduced their impact but made interpretation harder and didn’t fully resolve skewness. Ultimately, we opted for the IQR method with removal for cleaner results. But to ensure only the most extreme cases were flagged, we set a high threshold of 4 times the IQR. A lower threshold risked removing too many data points, potentially eliminating valuable information.
 
 •	**Correlation matrix**: we firstly plotted the whole correlation matrix, with all the features. This helped us a lot in seeing the ones we could drop, as they were not correlated with anyone. After this passage, we plotted the correlation matrix again but only with the variables we considered useful. 
+
+![correlationmatrix!](images_github/correlationmatrixpng.png 'correlationmatrix')
 
 •	**Feature engineering**: thanks to the correlation matrix and the pairplot of all of our variables, we noticed that we could combine some of them because of how highly correlated they were. After this, we had all of our final features, and we made a pairplot of all of them together. We created 2 variables: `Energy_Population_Impact` and `Energy_per_Mission`
 - The first feature we create calculates the impact of energy consumption relative to the alien population by multiplying the two existing features. 
